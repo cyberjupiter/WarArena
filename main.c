@@ -12,11 +12,11 @@ struct class{
 };
 
 struct status{
-    int attack;
-    int defend;
-    int attack_speed;
-    int critical;
-    int hp;
+    double attack;
+    double defend;
+    double attack_speed;
+    double critical;
+    double hp;
 };
 
 struct attributes{
@@ -50,7 +50,12 @@ int main(void)
 
     calculate_stats(&hero_0);
 
-    printf("Attack = %d\n", hero_0.attr.stats.attack);
+    printf("Attack = %.1f\n", hero_0.attr.stats.attack);
+    printf("Defend = %.1f\n", hero_0.attr.stats.defend);
+    printf("Attack Speed = %.1f\n", hero_0.attr.stats.attack_speed);
+    printf("Critical = %.1f\n", hero_0.attr.stats.critical);
+    printf("HP = %.1f\n", hero_0.attr.stats.hp);
+
     return 0;
 }
 
